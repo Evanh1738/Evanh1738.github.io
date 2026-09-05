@@ -17,3 +17,16 @@ I am inspired by the people around me and by the opportunities I have to try new
 - Be able to dunk a basketball
 - Get into a good college for medicine
 - Be the best version of myself I can be
+
+# Unit 0 Day 2 - Thinking Outside of the Box
+
+Here are some photos of the project:
+
+![Project Photo 1](images/IMG_7395.HEIC)
+![Project Photo 2](images/IMG_7398.HEIC)
+![Project Photo 3](images/IMG_7400.HEIC)
+![Project Photo 4](images/IMG_7406.HEIC)
+![Project Photo 5](images/IMG_73408.HEIC)
+![Project Photo 6](images/IMG_7410.HEIC)
+![Project Photo 6](images/IMG_7413.HEIC)
+![Project Photo 6](images/IMG_7416.HEIC)

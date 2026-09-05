@@ -4,13 +4,42 @@
 @import "{{ site.theme }}";
 
 .wrapper {
-  max-width: 1100px;
-}
-
-section {
-  width: 750px;
+  width: 1000px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 header {
   width: 250px;
+}
+
+section {
+  width: 700px;
+}
+
+footer {
+  width: 250px;
+}
+
+/* Keep the layout centered on smaller screens */
+@media print, screen and (max-width: 1000px) {
+  .wrapper {
+    width: auto;
+    margin: 0 30px;
+  }
+
+  header {
+    width: auto;
+    float: none;
+  }
+
+  section {
+    width: auto;
+    float: none;
+  }
+
+  footer {
+    width: auto;
+    float: none;
+  }
 }

@@ -22,4 +22,24 @@ I am inspired by the people around me and by the opportunities I have to try new
 
 Here are some photos of the project:
 
+<img src="/images/IMG_7385.jpeg" width="500">
+
 <img src="/images/IMG_7389.jpeg" width="500">
+
+<img src="/images/IMG_7392.jpeg" width="500">
+
+<img src="/images/IMG_7397.jpeg" width="500">
+
+<img src="/images/IMG_7398.jpeg" width="500">
+
+<img src="/images/IMG_7400.jpeg" width="500">
+
+<img src="/images/IMG_7406.jpeg" width="500">
+
+<img src="/images/IMG_7410.jpeg" width="500">
+
+<img src="/images/IMG_7413.jpeg" width="500">
+
+<img src="/images/IMG_7415.jpeg" width="500">
+
+<img src="/images/IMG_7416.jpeg" width="500">

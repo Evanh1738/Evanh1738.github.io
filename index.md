@@ -22,13 +22,14 @@ I am inspired by the people around me and by the opportunities I have to try new
 
 Here are some photos of the project:
 
-![Project Photo 1](images/IMG_7389.jpeg)
-![Project Photo 2](images/IMG_7392.jpeg)
-![Project Photo 3](images/IMG_7397.jpeg)
-![Project Photo 4](images/IMG_7398.jpeg)
-![Project Photo 5](images/IMG_7400.jpeg)
-![Project Photo 6](images/IMG_7406.jpeg)
-![Project Photo 7](images/IMG_7410.jpeg)
-![Project Photo 8](images/IMG_7413.jpeg)
-![Project Photo 9](images/IMG_7415.jpeg)
-![Project Photo 10](images/IMG_7416.jpeg)
+<img src=![Project Photo 1](images/IMG_7389.jpeg) width="500">
+<img src=![Project Photo 2](images/IMG_7392.jpeg) width="500">
+<img src=![Project Photo 3](images/IMG_7397.jpeg) width="500">
+<img src=![Project Photo 4](images/IMG_7398.jpeg) width="500">
+<img src=![Project Photo 5](images/IMG_7400.jpeg) width="500">
+<img src=![Project Photo 6](images/IMG_7406.jpeg) width="500">
+<img src=![Project Photo 7](images/IMG_7410.jpeg) width="500">
+<img src=![Project Photo 8](images/IMG_7413.jpeg) width="500">
+<img src=![Project Photo 9](images/IMG_7415.jpeg) width="500">
+<img src=![Project Photo 10](images/IMG_7416.jpeg) width="500">
+

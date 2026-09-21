@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evan | Unit 0 Day 2 - Thinking Outside of the Box</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f5f7;
+      color: #222;
+      line-height: 1.6;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255,255,255,.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #ddd;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo { font-size: 20px; font-weight: 800; }
+    nav a {
+      color: #555;
+      text-decoration: none;
+      margin-left: 22px;
+      font-size: 14px;
+    }
+    nav a:hover { color: #111; }
+
+    .intro {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 75px 25px 45px;
+    }
+    .intro-label {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #777;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+    .intro h1 {
+      font-size: clamp(40px, 7vw, 70px);
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+    .intro h1 span { color: #555; }
+    .intro-lead {
+      max-width: 720px;
+      font-size: 18px;
+      color: #666;
+    }
+
+    .about {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px 25px 75px;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+    .about-card {
+      background: white;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 3px 12px rgba(0,0,0,.07);
+    }
+    .about-card h2 {
+      font-size: 22px;
+      margin-bottom: 14px;
+    }
+    .about-card p { color: #555; }
+    .interests {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .interest {
+      background: #f0f1f3;
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 14px;
+    }
+    .goals {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+    .goals li::before {
+      content: "✓";
+      font-weight: 700;
+      margin-right: 10px;
+    }
+
+    .hero {
+      background: #20242b;
+      color: white;
+      padding: 75px 20px;
+      text-align: center;
+    }
+    .hero .label {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+      color: #bfc4cc;
+      margin-bottom: 15px;
+    }
+    .hero h2 {
+      font-size: clamp(32px, 6vw, 58px);
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+    .hero p {
+      color: #cfd3d8;
+      font-size: 17px;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 55px 25px 70px;
+    }
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      margin-bottom: 25px;
+    }
+    .section-header h2 { font-size: 28px; }
+    .section-header span { color: #777; font-size: 14px; }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .card {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 3px 12px rgba(0,0,0,.08);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,.13);
+    }
+    .card img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      display: block;
+    }
+    .card-info { padding: 16px 18px; }
+    .card-info h3 { font-size: 16px; margin-bottom: 5px; }
+    .card-info p { color: #777; font-size: 13px; }
+
+    footer {
+      background: #20242b;
+      color: #aaa;
+      text-align: center;
+      padding: 25px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 700px) {
+      header { padding: 16px 20px; }
+      nav { display: none; }
+      .intro { padding: 55px 20px 35px; }
+      .about { padding: 10px 15px 55px; }
+      .about-grid, .gallery { grid-template-columns: 1fr; }
+      .hero { padding: 55px 20px; }
+      main { padding: 40px 15px 55px; }
+      .card img { height: 350px; }
+      .section-header {
+        align-items: start;
+        flex-direction: column;
+        gap: 7px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">EVAN</div>
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#activity">Activity</a>
+    </nav>
+  </header>
+
+  <section class="intro">
+    <div class="intro-label">Welcome</div>
+    <h1>Hi, I'm <span>Evan.</span></h1>
+    <p class="intro-lead">
+      Here's a little about me, the experiences that have shaped me,
+      what inspires me, and some of the goals I'm working toward.
+    </p>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-grid">
+      <div class="about-card">
+        <h2>My Interests</h2>
+        <div class="interests">
+          <div class="interest">🏀 Basketball</div>
+          <div class="interest">📺 Watching TV</div>
+          <div class="interest">🎮 Playing video games</div>
+          <div class="interest">💪 Exercising</div>
+        </div>
+      </div>
+
+      <div class="about-card">
+        <h2>My Goals</h2>
+        <ul class="goals">
+          <li>Get straight A's</li>
+          <li>Be able to dunk a basketball</li>
+          <li>Get into a good college for medicine</li>
+          <li>Be the best version of myself I can be</li>
+        </ul>
+      </div>
+
+      <div class="about-card">
+        <h2>Experiences That Have Shaped Me</h2>
+        <p>
+          A lot of my experiences at school have shaped who I am. Being involved
+          in student government has helped me become a better leader and
+          communicator, while playing basketball and volleyball has taught me
+          about teamwork, discipline, and perseverance. The trips I've taken
+          through Webb have also helped me discover my love for new experiences,
+          exploring new places, and making new memories. These experiences have
+          made me more open-minded and excited to take on new opportunities.
+        </p>
+      </div>
+
+      <div class="about-card">
+        <h2>What Inspires Me</h2>
+        <p>
+          I am inspired by the people around me and by the opportunities I have
+          to try new things. I enjoy seeing people who are passionate about what
+          they do because it motivates me to find things that I care about too.
+          I’m also inspired by new experiences, traveling, and being able to see
+          different places and perspectives. These things motivate me to keep
+          learning, challenge myself, and make the most of the opportunities I have.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero" id="activity">
+    <div class="label">Unit 0 · Day 2</div>
+    <h2>Thinking Outside<br>of the Box</h2>
+    <p>
+      A collection of photos from today's activity and the creative
+      solutions we came up with along the way.
+    </p>
+  </section>
+
+  <main>
+    <div class="section-header">
+      <h2>Activity Gallery</h2>
+      <span>8 photos</span>
+    </div>
+
+    <div class="gallery">
+      <div class="card">
+        <img src="01.jpeg" alt="Thinking Outside of the Box activity">
+        <div class="card-info">
+          <h3>Photo 1</h3>
+          <p>When I was changing for functional fitness I lost my shoe. No matter how hard I searched I could not find my lost shoe.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="02.jpeg" alt="Thinking Outside of the Box activity">
+        <div class="card-info">
+          <h3>Photo 2</h3>
+          <p>So, I decided to make my own out of cardboard. Now I was able to go to functional!</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="03.jpeg" alt="Thinking Outside of the Box activity">
+        <div class="card-info">
+          <h3>Photo 3</h3>
+          <p>I walked into the library and saw my friend Matthew looking sad. He was trying to do his homework but was unable to because his writing utensils were spilled all over the table.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="04.jpeg" alt="Thinking Outside of the Box activity">
+        <div class="card-info">
+          <h3>Photo 4</h3>
+          <p>So, I made him a pencil holder out of cardboard. Now he had a place to neatly store his tools and was able to finish his work!</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="05.jpeg" alt="Thinking Outside of the Box activity">
+        <div class="card-info">
+          <h3>Photo 5</h3>
+          <p>I was sitting at my desk with my books out and realized I needed somewhere to store them. They were cluttering up my workspace!</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="06.jpeg" alt="Thinking Outside of the Box activity">
+        <div class="card-info">
+          <h3>Photo 6</h3>
+          <p>So, I made a book holder out of cardboard. Now I had a place to neatly store my books!</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="07.jpeg" alt="Thinking Outside of the Box activity">
+        <div class="card-info">
+          <h3>Photo 7</h3>
+          <p>I was walking by the Old School House when I saw my friend Alyssa trying to watch a show on her phone. She was frustrated because she had no way of holding her phone comfortably.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="08.jpeg" alt="Thinking Outside of the Box activity">
+        <div class="card-info">
+          <h3>Photo 8</h3>
+          <p>So, I made her a phone stand out of cardboard. She was thrilled to be able to watch her show now!</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    Unit 0 · Day 2 — Thinking Outside of the Box
+  </footer>
+
+</body>
+</html>

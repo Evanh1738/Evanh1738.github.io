@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Photos</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f1eb;
+      color: #222;
+    }
+
+    header {
+      text-align: center;
+      padding: 45px 20px 30px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 42px;
+    }
+
+    header p {
+      margin: 0;
+      color: #666;
+      font-size: 17px;
+    }
+
+    .gallery {
+      width: min(1200px, 92%);
+      margin: 20px auto 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 22px;
+    }
+
+    .photo {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
+      transition: transform 0.2s ease;
+    }
+
+    .photo:hover {
+      transform: translateY(-4px);
+    }
+
+    .photo img {
+      display: block;
+      width: 100%;
+      height: 330px;
+      object-fit: cover;
+    }
+
+    .caption {
+      padding: 14px 16px;
+      font-size: 15px;
+      color: #444;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 32px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .photo img {
+        height: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>My Photos</h1>
+    <p>A collection of photos from my project.</p>
+  </header>
+
+  <main class="gallery">
+    <div class="photo">
+      <img src="photo-1.jpeg" alt="New Balance shoe box">
+      <div class="caption">Photo 1</div>
+    </div>
+
+    <div class="photo">
+      <img src="photo-2.jpeg" alt="Shoes">
+      <div class="caption">Photo 2</div>
+    </div>
+
+    <div class="photo">
+      <img src="photo-3.jpeg" alt="Shoes and shoe box">
+      <div class="caption">Photo 3</div>
+    </div>
+
+    <div class="photo">
+      <img src="photo-4.jpeg" alt="Student working at a table">
+      <div class="caption">Photo 4</div>
+    </div>
+
+    <div class="photo">
+      <img src="photo-5.jpeg" alt="Close-up of a student working">
+      <div class="caption">Photo 5</div>
+    </div>
+
+    <div class="photo">
+      <img src="photo-6.jpeg" alt="Books and school supplies">
+      <div class="caption">Photo 6</div>
+    </div>
+
+    <div class="photo">
+      <img src="photo-7.jpeg" alt="School books in a cardboard holder">
+      <div class="caption">Photo 7</div>
+    </div>
+
+    <div class="photo">
+      <img src="photo-8.jpeg" alt="Student sitting at an outdoor table">
+      <div class="caption">Photo 8</div>
+    </div>
+
+    <div class="photo">
+      <img src="photo-9.jpeg" alt="Student smiling at an outdoor table">
+      <div class="caption">Photo 9</div>
+    </div>
+
+    <div class="photo">
+      <img src="photo-10.jpeg" alt="Phone on a cardboard stand">
+      <div class="caption">Photo 10</div>
+    </div>
+  </main>
+</body>
+</html>

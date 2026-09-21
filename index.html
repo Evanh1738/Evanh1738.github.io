@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 0 Day 2 - Thinking Outside of the Box</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f5f7;
+      color: #222;
+    }
+    header {
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      padding: 24px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo { font-size: 20px; font-weight: 700; }
+    .unit { color: #777; font-size: 14px; }
+    .hero {
+      background: #20242b;
+      color: white;
+      padding: 75px 20px;
+      text-align: center;
+    }
+    .label {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+      color: #bfc4cc;
+      margin-bottom: 15px;
+    }
+    .hero h1 {
+      font-size: clamp(32px, 6vw, 58px);
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+    .hero p {
+      color: #cfd3d8;
+      font-size: 17px;
+      max-width: 650px;
+      margin: auto;
+      line-height: 1.6;
+    }
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 55px 25px 70px;
+    }
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      margin-bottom: 25px;
+    }
+    .section-header h2 { font-size: 28px; }
+    .section-header span { color: #777; font-size: 14px; }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .card {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 3px 12px rgba(0,0,0,.08);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,.13);
+    }
+    .card img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      display: block;
+    }
+    .card-info { padding: 16px 18px; }
+    .card-info h3 { font-size: 16px; margin-bottom: 5px; }
+    .card-info p { color: #777; font-size: 13px; }
+    footer {
+      background: #20242b;
+      color: #aaa;
+      text-align: center;
+      padding: 25px;
+      font-size: 13px;
+    }
+    @media (max-width: 700px) {
+      header { padding: 20px; }
+      .hero { padding: 55px 20px; }
+      main { padding: 40px 15px 55px; }
+      .gallery { grid-template-columns: 1fr; }
+      .card img { height: 350px; }
+      .section-header {
+        align-items: start;
+        flex-direction: column;
+        gap: 7px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">UNIT 0</div>
+    <div class="unit">Day 2</div>
+  </header>
+
+  <section class="hero">
+    <div class="label">Unit 0 · Day 2</div>
+    <h1>Thinking Outside<br>of the Box</h1>
+    <p>
+      A collection of photos from today's activity and the creative
+      solutions we came up with along the way.
+    </p>
+  </section>
+
+  <main>
+    <div class="section-header">
+      <h2>Activity Gallery</h2>
+      <span>8 photos</span>
+    </div>
+
+    <div class="gallery">
+      <div class="card">
+        <img src="01.jpeg" alt="Thinking Outside of the Box activity">
+        <div class="card-info">
+          <h3>Activity</h3>
+          <p>Unit 0 · Day 2</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="02.jpeg" alt="Thinking Outside of the Box activity">
+        <div class="card-info">
+          <h3>Activity</h3>
+          <p>Unit 0 · Day 2</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="03.jpeg" alt="Thinking Outside of the Box activity">
+        <div class="card-info">
+          <h3>Activity</h3>
+          <p>Unit 0 · Day 2</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="04.jpeg" alt="Thinking Outside of the Box activity">
+        <div class="card-info">
+          <h3>Activity</h3>
+          <p>Unit 0 · Day 2</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="05.jpeg" alt="Thinking Outside of the Box activity">
+        <div class="card-info">
+          <h3>Activity</h3>
+          <p>Unit 0 · Day 2</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="06.jpeg" alt="Thinking Outside of the Box activity">
+        <div class="card-info">
+          <h3>Activity</h3>
+          <p>Unit 0 · Day 2</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="07.jpeg" alt="Thinking Outside of the Box activity">
+        <div class="card-info">
+          <h3>Activity</h3>
+          <p>Unit 0 · Day 2</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="08.jpeg" alt="Thinking Outside of the Box activity">
+        <div class="card-info">
+          <h3>Activity</h3>
+          <p>Unit 0 · Day 2</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    Unit 0 · Day 2 — Thinking Outside of the Box
+  </footer>
+</body>
+</html>

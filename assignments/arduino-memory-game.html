@@ -1,1 +1,552 @@
-ok
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Arduino Light Memory Game | Innovator Journal</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .journal-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        .journal-content h1,
+        .journal-content h2,
+        .journal-content h3 {
+            color: #e63946;
+        }
+
+        .journal-content section {
+            margin: 32px 0;
+            padding: 24px;
+            border: 1px solid #444;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .journal-content a {
+            color: #ff646e;
+        }
+
+        .journal-figure {
+            margin: 28px auto;
+            max-width: 850px;
+        }
+
+        .journal-figure img {
+            display: block;
+            width: 100%;
+            max-height: 650px;
+            object-fit: contain;
+            border-radius: 9px;
+            margin: 0 auto;
+        }
+
+        .journal-figure figcaption {
+            color: #ccc;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+
+        .journal-content pre {
+            background: #111;
+            color: #f5f5f5;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 18px;
+            overflow-x: auto;
+            white-space: pre;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .journal-content details {
+            margin-top: 18px;
+        }
+
+        .journal-content summary {
+            cursor: pointer;
+            color: #ff646e;
+            font-weight: bold;
+            padding: 10px 0;
+        }
+
+        .journal-content video {
+            display: block;
+            width: 100%;
+            max-height: 600px;
+            margin: 20px auto;
+            border-radius: 9px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 24px;
+        }
+    </style>
+</head>
+
+<body>
+
+<main class="journal-content">
+
+    <header>
+        <p>Tech &amp; Innovation • Unit 1: Electronics &amp; Arduino</p>
+
+        <h1>Arduino Light Memory Game</h1>
+
+        <p><strong>Innovator Journal — Day 8</strong></p>
+
+        <p>
+            For this project, I built an interactive memory game using
+            an Arduino, four LEDs, four push buttons, and a speaker.
+            The game plays a sequence of lights and sounds that the
+            player must repeat. Each round adds another step to the
+            sequence, making it more challenging.
+        </p>
+    </header>
+
+    <section>
+        <h2>1. My Starting Interest</h2>
+
+        <p>
+            I chose coding and electronics because I wanted to learn
+            how code can control physical components. I was interested
+            in building something interactive instead of only writing
+            code on a computer. This project let me combine programming,
+            wiring, and problem-solving.
+        </p>
+    </section>
+
+    <section>
+        <h2>2. Learning New Components</h2>
+
+        <p>
+            The main components I used were LEDs, push buttons,
+            resistors, a speaker, a breadboard, and an Arduino board.
+            The LEDs display the sequence, the buttons let the player
+            enter an answer, and the speaker plays tones that match
+            the lights.
+        </p>
+
+        <p>
+            I followed a YouTube tutorial to learn how to build and
+            program the Arduino Light Memory Game.
+            <a href="https://www.youtube.com/watch?v=ah5ioznsX3k&amp;list=WL&amp;index=3"
+               target="_blank"
+               rel="noopener noreferrer">
+                Watch the YouTube tutorial
+            </a>.
+        </p>
+    </section>
+
+    <section>
+        <h2>3. Building the Circuit</h2>
+
+        <p>
+            I started by placing the components on the breadboard and
+            connecting them to the Arduino with jumper wires. I had
+            to make sure the LEDs, buttons, resistors, and speaker
+            were connected correctly so the hardware would work
+            with the program.
+        </p>
+
+        <figure class="journal-figure">
+            <img
+                src="../assets/images/01-early-incomplete-circuit.jpg"
+                alt="Early attempt at wiring the Arduino memory game"
+                loading="lazy"
+            >
+            <figcaption>
+                <strong>My first attempt.</strong>
+                I initially wired the circuit incorrectly, so I had
+                to take it apart and restart.
+            </figcaption>
+        </figure>
+
+        <figure class="journal-figure">
+            <img
+                src="../assets/images/02-components-top-view.jpg"
+                alt="Top view of the LEDs, buttons, and breadboard"
+                loading="lazy"
+            >
+            <figcaption>
+                <strong>Adding the components.</strong>
+                I arranged the LEDs, push buttons, resistors, and
+                speaker on the breadboard.
+            </figcaption>
+        </figure>
+    </section>
+
+    <section>
+        <h2>4. Trial and Error: Wiring Was Harder Than Expected</h2>
+
+        <p>
+            At first, I wired the circuit incorrectly, so I had to
+            take it apart and restart. Wiring everything was harder
+            than I originally expected because each component had
+            to connect to the correct breadboard rows and Arduino
+            pins.
+        </p>
+
+        <p>
+            Even after rebuilding the circuit, the yellow LED would
+            not light up. I eventually fixed it by moving its resistor
+            one position closer on the breadboard. After that change,
+            the LED worked properly.
+        </p>
+
+        <p>
+            This taught me that even a small wiring mistake can stop
+            part of a circuit from working. I had to be patient,
+            check the connections, and test changes instead of
+            assuming a component was broken.
+        </p>
+
+        <figure class="journal-figure">
+            <img
+                src="../assets/images/03-arduino-pin-connections.jpg"
+                alt="Jumper wires connecting the circuit to the Arduino"
+                loading="lazy"
+            >
+            <figcaption>
+                <strong>Checking the connections.</strong>
+                I examined the jumper wires connecting the breadboard
+                to the Arduino's digital pins.
+            </figcaption>
+        </figure>
+
+        <figure class="journal-figure">
+            <img
+                src="../assets/images/04-circuit-closeup.jpg"
+                alt="Close-up of the Arduino memory game circuit"
+                loading="lazy"
+            >
+            <figcaption>
+                <strong>Troubleshooting the circuit.</strong>
+                I checked the component placement and wiring while
+                trying to get every part working correctly.
+            </figcaption>
+        </figure>
+    </section>
+
+    <section>
+        <h2>5. Uploading and Testing the Code</h2>
+
+        <p>
+            John Deng helped me connect my laptop to the Arduino
+            when I had trouble uploading the code. Steven helped
+            me troubleshoot the lights circuit so I could get the
+            LEDs working correctly.
+        </p>
+
+        <p>
+            Once the program was uploaded, I tested whether the
+            Arduino could play the sequence, read button presses,
+            and recognize when the player entered the correct
+            sequence or made a mistake.
+        </p>
+
+        <figure class="journal-figure">
+            <img
+                src="../assets/images/05-circuit-testing.jpg"
+                alt="Arduino and breadboard circuit during testing"
+                loading="lazy"
+            >
+            <figcaption>
+                <strong>Testing the assembled circuit.</strong>
+                Connecting the Arduino by USB allowed me to upload
+                the program and test the game.
+            </figcaption>
+        </figure>
+    </section>
+
+    <section>
+        <h2>6. Final Working Build</h2>
+
+        <p>
+            The completed setup combines four LEDs, four push buttons,
+            a speaker, and the Arduino. The player watches and listens
+            to a sequence, then repeats it using the buttons. Each
+            round adds another step, making the game harder.
+        </p>
+
+        <figure class="journal-figure">
+            <img
+                src="../assets/images/06-final-circuit.jpg"
+                alt="Completed Arduino Light Memory Game circuit"
+                loading="lazy"
+            >
+            <figcaption>
+                <strong>Final circuit.</strong>
+                My assembled Arduino Light Memory Game with its
+                LEDs, buttons, speaker, breadboard, and Arduino board.
+            </figcaption>
+        </figure>
+
+        <h3>Video Demonstration</h3>
+
+        <p>
+            This section can show the game in action. Upload your
+            video to the repository and make sure the filename
+            matches the video path below.
+        </p>
+
+        <video controls>
+            <source
+                src="../assets/videos/memory-game-demo.mp4"
+                type="video/mp4"
+            >
+            Your browser does not support video playback.
+        </video>
+    </section>
+
+    <section id="arduino-code">
+        <h2>7. Arduino Code</h2>
+
+        <p>
+            The code generates a random sequence, lights up the LEDs
+            while playing matching tones, reads the player's button
+            presses, and checks the answers. It also plays sounds
+            when the player completes a round or gets the sequence
+            wrong.
+        </p>
+
+        <details>
+            <summary>Click to view the full Arduino code</summary>
+
+            <pre><code>#define NOTE_C4  262
+#define NOTE_E4  330
+#define NOTE_G4  392
+#define NOTE_C5  523
+#define NOTE_CS5 554
+#define NOTE_D5  587
+#define NOTE_DS5 622
+#define NOTE_E5  659
+#define NOTE_G5  784
+
+/* Constants - define pin numbers for buttons,
+   LEDs and speaker, and also the game tones: */
+const byte buttonPins[] = {2, 3, 4, 5};
+const byte ledPins[] = {7, 8, 9, 10};
+#define SPEAKER_PIN 12
+
+#define MAX_GAME_LENGTH 100
+
+const int gameTones[] = {
+    NOTE_C4, NOTE_E4, NOTE_G4, NOTE_C5
+};
+
+/* Global variables - store the game state */
+byte gameSequence[MAX_GAME_LENGTH] = {0};
+byte gameIndex = 0;
+
+/**
+   Set up the Arduino board and initialize Serial communication
+*/
+void setup() {
+    Serial.begin(9600);
+
+    for (byte i = 0; i &lt; 4; i++) {
+        pinMode(ledPins[i], OUTPUT);
+        pinMode(buttonPins[i], INPUT_PULLUP);
+    }
+
+    pinMode(SPEAKER_PIN, OUTPUT);
+
+    // Prime the random number generator.
+    // Assumes A0 is floating (disconnected):
+    randomSeed(analogRead(A0));
+}
+
+/**
+   Lights the given LED and plays a suitable tone
+*/
+void lightLedAndPlayTone(byte ledIndex) {
+    digitalWrite(ledPins[ledIndex], HIGH);
+    tone(SPEAKER_PIN, gameTones[ledIndex]);
+    delay(300);
+    digitalWrite(ledPins[ledIndex], LOW);
+    noTone(SPEAKER_PIN);
+}
+
+/**
+   Plays the sequence of notes the user has to repeat
+*/
+void playSequence() {
+    for (int i = 0; i &lt; gameIndex; i++) {
+        byte currentLed = gameSequence[i];
+        lightLedAndPlayTone(currentLed);
+        delay(50);
+    }
+}
+
+/**
+   Waits until the user presses a button and returns its index
+*/
+byte readButtons() {
+    while (true) {
+        for (byte i = 0; i &lt; 4; i++) {
+            byte buttonPin = buttonPins[i];
+
+            if (digitalRead(buttonPin) == LOW) {
+                return i;
+            }
+        }
+
+        delay(1);
+    }
+}
+
+/**
+   Plays the game-over sequence and reports the score
+*/
+void gameOver() {
+    Serial.print("Game over! your score: ");
+    Serial.println(gameIndex - 1);
+
+    gameIndex = 0;
+    delay(200);
+
+    // Play a Wah-Wah-Wah-Wah sound
+    tone(SPEAKER_PIN, NOTE_DS5);
+    delay(300);
+    tone(SPEAKER_PIN, NOTE_D5);
+    delay(300);
+    tone(SPEAKER_PIN, NOTE_CS5);
+    delay(300);
+
+    for (byte i = 0; i &lt; 10; i++) {
+        for (int pitch = -10; pitch &lt;= 10; pitch++) {
+            tone(SPEAKER_PIN, NOTE_C5 + pitch);
+            delay(5);
+        }
+    }
+
+    noTone(SPEAKER_PIN);
+    delay(500);
+}
+
+/**
+   Gets the user's input and compares it with the expected sequence
+*/
+bool checkUserSequence() {
+    for (int i = 0; i &lt; gameIndex; i++) {
+        byte expectedButton = gameSequence[i];
+        byte actualButton = readButtons();
+
+        lightLedAndPlayTone(actualButton);
+
+        if (expectedButton != actualButton) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+/**
+   Plays a sound whenever the user finishes a level
+*/
+void playLevelUpSound() {
+    tone(SPEAKER_PIN, NOTE_E4);
+    delay(150);
+    tone(SPEAKER_PIN, NOTE_G4);
+    delay(150);
+    tone(SPEAKER_PIN, NOTE_E5);
+    delay(150);
+    tone(SPEAKER_PIN, NOTE_C5);
+    delay(150);
+    tone(SPEAKER_PIN, NOTE_D5);
+    delay(150);
+    tone(SPEAKER_PIN, NOTE_G5);
+    delay(150);
+
+    noTone(SPEAKER_PIN);
+}
+
+/**
+   The main game loop
+*/
+void loop() {
+    // Add a random color to the end of the sequence
+    gameSequence[gameIndex] = random(0, 4);
+    gameIndex++;
+
+    if (gameIndex &gt;= MAX_GAME_LENGTH) {
+        gameIndex = MAX_GAME_LENGTH - 1;
+    }
+
+    playSequence();
+
+    if (!checkUserSequence()) {
+        gameOver();
+    }
+
+    delay(300);
+
+    if (gameIndex &gt; 0) {
+        playLevelUpSound();
+        delay(300);
+    }
+}</code></pre>
+        </details>
+    </section>
+
+    <section>
+        <h2>8. Reflection</h2>
+
+        <h3>How could this project be used in the real world?</h3>
+
+        <p>
+            A game like this could help children practice memory,
+            attention, and pattern recognition. It could also be
+            used as a simple introduction to electronics and programming.
+        </p>
+
+        <h3>What would I change or improve?</h3>
+
+        <p>
+            I could add clearer instructions, more difficulty settings,
+            and feedback that helps players understand their progress.
+            I could also improve the timing and behavior of the lights
+            and sounds.
+        </p>
+
+        <h3>What skill would I rely on most?</h3>
+
+        <p>
+            I would rely on debugging and problem-solving. When the
+            circuit was wired incorrectly and the yellow LED did not
+            work, I had to check the setup, make changes, and keep
+            trying until it worked.
+        </p>
+    </section>
+
+    <section>
+        <h2>9. What I Learned</h2>
+
+        <p>
+            This project taught me how programming and physical
+            electronics work together. I learned that building a
+            circuit takes careful wiring and testing, and that
+            collaboration can help solve problems. I also gained
+            experience finding mistakes and making changes to
+            improve a project.
+        </p>
+    </section>
+
+    <a class="back-link" href="../index.html">
+        &larr; Back to Home
+    </a>
+
+</main>
+
+</body>
+</html>

@@ -1,111 +1,386 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A collection of engineering, design, and technology projects.">
-  <title>Innovator Journal | Home</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <header class="site-header">
-    <a class="wordmark" href="index.html">INNOVATOR <span>JOURNAL</span></a>
-    <nav aria-label="Main navigation">
-      <a class="active" href="index.html">Home</a>
-      <a href="#projects">Projects</a>
-      <a href="#about">About</a>
-    </nav>
-  </header>
+/* ========================================
+   EVANHARO1738.GITHUB.IO
+   Black / White / Red Portfolio Design
+   ======================================== */
 
-  <main>
-    <section class="hero">
-      <p class="eyebrow">DESIGN · ENGINEERING · PROCESS</p>
-      <h1>Ideas become<br><span class="muted">something real.</span></h1>
-      <p class="hero-copy">A record of projects, experiments, mistakes, and discoveries — one build at a time.</p>
-      <a class="text-link" href="#projects">Explore projects <span aria-hidden="true">↘</span></a>
-      <div class="hero-note"><span class="status-dot"></span> Learning by making</div>
-    </section>
+:root {
+  --background: #050505;
+  --surface: #090909;
+  --accent: #ff2638;
+  --text: #ffffff;
+  --muted: #ffffff;
+  --border: #454545;
+}
 
-    <section class="section" id="projects">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">SELECTED WORK</p>
-          <h2>Project archive</h2>
-        </div>
-        <p class="section-aside">A growing collection<br>of things I've made.</p>
-      </div>
-<!-- BUTTON TO ADD FUTURE PROJECTS -->
-<div class="add-project-wrapper">
-  <a href="#add-project-help" class="add-project-button">
-    + Add New Project
-  </a>
-</div>
+/* RESET */
 
-<!-- INSTRUCTIONS FOR ADDING PROJECTS -->
-<section id="add-project-help" class="add-project-help">
-  <h2>Adding a New Project</h2>
-  <p>Want to add another assignment? Follow these simple steps:</p>
-  <ol>
-    <li>Open index.html and find the project-grid section.</li>
-    <li>Copy one of your existing project cards.</li>
-    <li>Change the title, description, and link.</li>
-    <li>Create your new assignment page and commit your changes.</li>
-  </ol>
-</section>
-      <div class="project-grid">
-        <a class="project-card" href="assignments/cardboard-shoe.html">
-          <div class="project-art art-paper"><span>01</span><div class="art-shape shoe-shape"></div></div>
-          <div class="card-meta"><span>UNIT 00</span><span>DESIGN</span></div>
-          <h3>Cardboard Shoe</h3>
-          <p>Turning a problem into a practical prototype.</p>
-          <span class="card-arrow" aria-hidden="true">↗</span>
-        </a>
+* {
+  box-sizing: border-box;
+}
 
-        <a class="project-card" href="assignments/pencil-holder.html">
-          <div class="project-art art-pencil"><span>02</span><div class="pencil-shape"></div></div>
-          <div class="card-meta"><span>UNIT 00</span><span>PROTOTYPING</span></div>
-          <h3>Pencil Holder</h3>
-          <p>Creating a simple solution for a cluttered workspace.</p>
-          <span class="card-arrow" aria-hidden="true">↗</span>
-        </a>
+html {
+  scroll-behavior: smooth;
+}
 
-        <a class="project-card" href="assignments/arduino-memory-game.html">
-          <div class="project-art art-circuit"><span>03</span><div class="circuit-board"><i></i><i></i><i></i><i></i></div></div>
-          <div class="card-meta"><span>UNIT 01</span><span>ELECTRONICS</span></div>
-          <h3>Arduino Memory Game</h3>
-          <p>Building and debugging a light-based memory game.</p>
-          <span class="card-arrow" aria-hidden="true">↗</span>
-        </a>
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
 
-        <a class="project-card" href="assignments/stepper-motor.html">
-          <div class="project-art art-motor"><span>04</span><div class="motor-shape"><div></div></div></div>
-          <div class="card-meta"><span>UNIT 02</span><span>MECHANISMS</span></div>
-          <h3>Stepper Motor</h3>
-          <p>Exploring motor control, wiring, and driver circuits.</p>
-          <span class="card-arrow" aria-hidden="true">↗</span>
-        </a>
+a {
+  color: var(--accent);
+}
 
-        <a class="project-card project-card-template" href="assignments/assignment-template.html">
-          <div class="project-art art-blank"><span>＋</span></div>
-          <div class="card-meta"><span>NEW PROJECT</span><span>TEMPLATE</span></div>
-          <h3>Future Assignment</h3>
-          <p>Use the template to add another project page.</p>
-          <span class="card-arrow" aria-hidden="true">↗</span>
-        </a>
-      </div>
-    </section>
+/* ========================================
+   HEADER
+   ======================================== */
 
-    <section class="about-section" id="about">
-      <p class="eyebrow">ABOUT THIS JOURNAL</p>
-      <h2>Not just the result.<br><span class="muted">The process, too.</span></h2>
-      <p>This journal documents the ideas, tests, setbacks, revisions, and lessons behind each project. Every build is a chance to learn something new.</p>
-    </section>
-  </main>
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  padding: 16px 2.4%;
+  background: #050505;
+  border-bottom: 1px solid #383838;
+}
 
-  <footer class="site-footer">
-    <a class="wordmark" href="index.html">INNOVATOR <span>JOURNAL</span></a>
-    <p>Built through curiosity and iteration.</p>
-    <a href="#top" class="back-top">Back to top ↑</a>
-  </footer>
-</body>
-</html>
+.site-name {
+  display: inline-block;
+  padding-bottom: 4px;
+  border-bottom: 3px solid var(--accent);
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.3;
+  text-decoration: none;
+}
+
+.site-url {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: right;
+  text-decoration: none;
+}
+
+.site-name:hover,
+.site-url:hover {
+  color: var(--accent);
+}
+
+/* ========================================
+   MAIN LAYOUT
+   ======================================== */
+
+main {
+  width: min(1180px, 90%);
+  margin: 0 auto;
+  padding: 42px 0 24px;
+}
+
+/* ========================================
+   HERO
+   ======================================== */
+
+.hero {
+  margin-bottom: 34px;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 5px 16px;
+  border-radius: 30px;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+.hero h1 {
+  margin: 7px 0 18px;
+  color: #ffffff;
+  font-size: clamp(42px, 6.2vw, 92px);
+  font-weight: 800;
+  letter-spacing: -2.5px;
+  line-height: 1.08;
+}
+
+.hero p {
+  max-width: 740px;
+  margin: 0;
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 19px;
+  line-height: 1.65;
+}
+
+/* ========================================
+   PROJECT SECTION
+   ======================================== */
+
+.section-heading {
+  margin: 0 0 8px;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 1.35;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+}
+
+/* PROJECT CARDS */
+
+.project-card {
+  min-width: 0;
+  padding: 18px 25px;
+  overflow-wrap: anywhere;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.project-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.project-card h3 {
+  margin: 0 0 3px;
+  color: #ffffff;
+  font-size: 23px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.project-card p {
+  margin: 2px 0 12px;
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* PROJECT LINKS */
+
+.project-link {
+  display: inline-block;
+  color: var(--accent);
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+}
+
+.project-link:hover {
+  color: #ffffff;
+}
+
+.project-link::after {
+  content: " →";
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* ========================================
+   ADD NEW PROJECT BUTTON
+   ======================================== */
+
+.add-project-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 28px 0 6px;
+}
+
+.add-project-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-width: 256px;
+  padding: 10px 22px;
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid var(--accent);
+  border-radius: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.add-project-button::before {
+  content: "+";
+  color: var(--accent);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.add-project-button:hover {
+  background: var(--accent);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.add-project-button:hover::before {
+  color: #ffffff;
+}
+
+/* ========================================
+   ADD PROJECT HELP SECTION
+   ======================================== */
+
+.add-project-help {
+  margin: 26px 0;
+  padding: 22px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  scroll-margin-top: 20px;
+}
+
+.add-project-help h2 {
+  margin-top: 0;
+  color: #ffffff;
+  font-size: 25px;
+}
+
+.add-project-help p,
+.add-project-help li {
+  color: #ffffff;
+}
+
+.add-project-help code {
+  padding: 2px 6px;
+  background: #202020;
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.site-footer {
+  padding: 8px 0 0;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+/* ========================================
+   OTHER HEADINGS AND TEXT
+   ======================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+strong {
+  color: #ffffff;
+}
+
+p,
+li,
+small {
+  color: #ffffff;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+
+/* ========================================
+   MOBILE RESPONSIVENESS
+   ======================================== */
+
+@media (max-width: 650px) {
+  .site-header {
+    padding: 13px 5%;
+    gap: 12px;
+  }
+
+  .site-name {
+    font-size: 16px;
+  }
+
+  .site-url {
+    max-width: 52%;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+  }
+
+  main {
+    width: 90%;
+    padding-top: 35px;
+  }
+
+  .hero {
+    margin-bottom: 32px;
+  }
+
+  .hero h1 {
+    font-size: clamp(40px, 10vw, 60px);
+    letter-spacing: -1.5px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+
+  .section-heading {
+    font-size: 26px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .project-card {
+    padding: 17px 19px;
+  }
+
+  .project-card h3 {
+    font-size: 21px;
+  }
+
+  .project-card p {
+    font-size: 17px;
+  }
+
+  .add-project-button {
+    min-width: 230px;
+  }
+}
+
+/* RED SELECTION HIGHLIGHT */
+
+::selection {
+  background: var(--accent);
+  color: #ffffff;
+}

@@ -5,35 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stepper Motor Project | Innovator Journal</title>
     <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        figure {
+            text-align: center;
+            margin: 30px auto;
+        }
+
+        figure img {
+            display: block;
+            width: 100%;
+            max-width: 600px;
+            max-height: 450px;
+            height: auto;
+            object-fit: contain;
+            margin: 0 auto;
+            border-radius: 8px;
+        }
+
+        figcaption {
+            max-width: 600px;
+            margin: 10px auto 0;
+            font-size: 0.95rem;
+            opacity: 0.85;
+            line-height: 1.6;
+        }
+
+        .journal-section {
+            margin: 40px 0;
+        }
+
+        .journal-section p {
+            line-height: 1.8;
+        }
+    </style>
 </head>
 
 <body>
     <main class="container">
+
         <header>
             <h1>Stepper Motor Project</h1>
             <p>Innovator Journal | Unit 2</p>
         </header>
 
-        <section>
+        <section class="journal-section">
             <h2>Project Overview</h2>
+
             <p>
-                For this project, Ava and I worked on setting up and controlling a
-                stepper motor using an Arduino, a breadboard, and an A4988 motor
-                driver. We followed a tutorial to learn how the different
+                For this project, Ava and I worked on setting up and controlling
+                a stepper motor using an Arduino, a breadboard, and an A4988
+                motor driver. We followed a tutorial to learn how the different
                 components connected and worked together. Our goal was to build
                 a working circuit that could make the stepper motor move.
             </p>
         </section>
 
-        <section>
+        <section class="journal-section">
             <h2>1. Initial Setup</h2>
 
             <figure>
                 <img src="../assets/images/stepper-01.png"
                      alt="Initial stepper motor setup following a tutorial">
                 <figcaption>
-                    Image 1: Ava and I beginning the project by following a tutorial
-                    to set up the stepper motor circuit.
+                    Image 1: Ava and I beginning the project by following a
+                    tutorial to set up the stepper motor circuit.
                 </figcaption>
             </figure>
 
@@ -53,9 +89,9 @@
 
             <p>
                 This was our first attempt at wiring the circuit. Since there
-                were several components and connections to keep track of, it
-                was important to pay attention to the tutorial and make sure
-                the wires were in the correct places.
+                were several components and connections to keep track of, we
+                needed to pay attention to the tutorial and make sure the wires
+                were in the correct places.
             </p>
 
             <figure>
@@ -69,42 +105,42 @@
 
             <p>
                 The A4988 driver is an important part of the circuit because
-                it controls the electrical signals sent to the stepper motor.
-                The heatsink helps dissipate heat from the driver while it
-                operates.
+                it helps control the electrical current going to the stepper
+                motor. The heatsink helps dissipate heat from the driver
+                during operation.
             </p>
         </section>
 
-        <section>
+        <section class="journal-section">
             <h2>2. Troubleshooting Our Circuit</h2>
 
             <p>
                 After our first attempt, we realized that our circuit was not
-                working because we had made mistakes in the wiring. We needed
-                to figure out what went wrong instead of continuing with a
-                setup that did not work.
+                working because we had made mistakes in the wiring. Instead of
+                continuing with a setup that did not work, we needed to figure
+                out what had gone wrong.
             </p>
 
             <figure>
                 <img src="../assets/images/stepper-04.png"
                      alt="John Deng and Ryan's working stepper motor setup">
                 <figcaption>
-                    Image 4: Analyzing John Deng and Ryan's working stepper motor
-                    setup to understand how the circuit should be connected.
+                    Image 4: Analyzing John Deng and Ryan's working stepper
+                    motor setup to understand how the circuit should connect.
                 </figcaption>
             </figure>
 
             <p>
                 We looked at John Deng and Ryan's working setup to compare it
-                with ours and get a better understanding of the connections.
-                After realizing that we had wired our circuit incorrectly,
-                we decided to take apart our original setup and start over.
-                This gave us a chance to rebuild it more carefully rather
-                than keep guessing what was wrong.
+                with ours and better understand the connections. After
+                realizing that we had wired our circuit incorrectly, we took
+                apart our original setup and decided to start over. Looking
+                at a working example gave us a better idea of what we needed
+                to change.
             </p>
         </section>
 
-        <section>
+        <section class="journal-section">
             <h2>3. Getting Help During Office Hours</h2>
 
             <figure>
@@ -119,29 +155,29 @@
             <p>
                 During office hours, Dr. Dzula helped me understand how the
                 breadboard connections worked and how to wire the circuit
-                correctly. Instead of only trying random changes, I was able
-                to learn more about where the connections needed to go and
-                how the different parts of the circuit worked together.
+                correctly. Instead of randomly changing wires, I began to
+                understand where the connections needed to go and how the
+                different parts of the circuit worked together.
             </p>
 
             <figure>
                 <img src="../assets/images/stepper-06.png"
                      alt="Completed stepper motor circuit">
                 <figcaption>
-                    Image 6: The completed circuit after about an hour of working
-                    with Dr. Dzula.
+                    Image 6: The completed circuit after about an hour of
+                    working with Dr. Dzula.
                 </figcaption>
             </figure>
 
             <p>
-                After about an hour of work, I finally had a working setup.
-                With Dr. Dzula's help, I was able to correct the wiring and
-                better understand how the breadboard and driver were being
-                used in the circuit.
+                After about an hour of working with Dr. Dzula, I finally had
+                a working setup. With his help, I was able to correct the
+                wiring and better understand how the breadboard and driver
+                were being used in the circuit.
             </p>
         </section>
 
-        <section>
+        <section class="journal-section">
             <h2>4. Final Result</h2>
 
             <figure>
@@ -154,67 +190,68 @@
             </figure>
 
             <p>
-                Seeing the stepper motor finally move showed that the circuit
-                was working. This was the result of rebuilding the setup,
-                correcting our mistakes, and getting help to understand
-                the wiring.
+                Seeing the stepper motor finally move showed me that the
+                circuit was working. This was the result of rebuilding the
+                setup, correcting our mistakes, and getting help to
+                understand the wiring.
             </p>
         </section>
 
-        <section>
+        <section class="journal-section">
             <h2>5. What I Learned</h2>
 
             <p>
                 One of the biggest things I learned was how a breadboard
-                actually works. I learned that the breadboard has separate
-                connected sections, and that the holes are not all connected
-                to each other. Some connections need to be made using wires
-                to link different sections together. Understanding this made
-                it easier to see why placing a wire in the wrong row could
-                stop the entire circuit from working.
+                actually works. I learned that the holes on a breadboard
+                are connected in specific groups, rather than every hole
+                being connected to every other hole. Some sections need
+                wires to connect them to other parts of the circuit.
+                Understanding this helped me see why placing a wire in the
+                wrong row could stop the entire circuit from working.
             </p>
 
             <p>
-                I also learned more about the A4988 driver. The Arduino can
-                send control signals, but the driver helps control the
-                electrical current going to the stepper motor coils so the
-                motor can move in steps. This helped me understand that each
-                component has a specific job and that they all need to work
-                together.
+                I also learned more about the A4988 driver. The Arduino
+                sends control signals, while the driver helps control the
+                current supplied to the stepper motor's coils so it can
+                move in steps. This helped me understand that every
+                component has a specific job and that the components need
+                to work together for the circuit to function.
             </p>
 
             <p>
-                Another important lesson was how much accurate wiring matters.
-                Even if all the correct components are being used, the circuit
-                will not work if the connections are wrong. When our first
-                setup failed, comparing it with a working example and asking
-                Dr. Dzula for help taught me to troubleshoot systematically
-                instead of just guessing.
+                Another important lesson was how much accurate wiring
+                matters. Even when all the correct components are being
+                used, the circuit will not work if the connections are
+                wrong. When our first setup failed, comparing it with a
+                working example and asking Dr. Dzula for help taught me
+                to troubleshoot more carefully instead of just guessing.
             </p>
 
             <p>
-                I also learned that taking something apart and starting over
-                can be a useful part of the engineering process. At first,
-                our circuit not working was frustrating, but rebuilding it
-                helped me understand the connections better. I learned that
-                asking for help, observing other people's designs, and
+                I also learned that taking something apart and starting
+                over can be a useful part of the engineering process.
+                Although our first setup did not work, rebuilding it helped
+                me understand the connections better. I learned that
+                observing other people's designs, asking for help, and
                 understanding why a solution works are more useful than
                 simply copying the final result.
             </p>
 
             <p>
                 Overall, this project helped me become more confident with
-                breadboards, motor drivers, and electronic circuits. Most
-                importantly, I learned that getting a project to work is not
-                just about following instructions. It is also about
-                understanding the system, finding mistakes, and learning
-                from the process.
+                breadboards, motor drivers, and electronic circuits.
+                Most importantly, I learned that getting a project to work
+                is not just about following instructions. It is also about
+                understanding the system, identifying mistakes, and
+                learning from the process.
             </p>
         </section>
 
         <p>
             <a href="../index.html">Back to Portfolio</a>
         </p>
+
     </main>
 </body>
 </html>

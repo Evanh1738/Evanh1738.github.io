@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One-Shot Game and Autopsy</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .project-section {
+      margin: 30px 0;
+    }
+
+    .project-section img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 16px auto;
+      border: 2px solid #e63946;
+      border-radius: 8px;
+    }
+
+    .project-section blockquote {
+      border-left: 3px solid #e63946;
+      padding-left: 16px;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1>One-Shot Game and Autopsy</h1>
+
+    <section class="project-section">
+      <h2>Project Overview</h2>
+      <p>
+        For this project, I used WebbGPT to generate a one-shot game.
+        I chose a simple driving simulator where the player controls
+        a car and avoids obstacles. My goal was to see how well AI
+        could turn a basic idea into a playable game using one prompt.
+      </p>
+    </section>
+
+    <section class="project-section">
+      <h2>Planning and Goal Setting</h2>
+      <p>
+        I wanted my game to be simple but still fun to play. My main
+        goals were to create car controls, obstacles, a scoring system,
+        and a way to restart after crashing.
+      </p>
+      <ul>
+        <li>Create a playable driving game.</li>
+        <li>Make avoiding obstacles the main objective.</li>
+        <li>Track progress with a scoring system.</li>
+        <li>Increase the challenge as the game progresses.</li>
+        <li>Allow the player to restart after crashing.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>My Original Prompt</h2>
+      <blockquote>
+        can you make me code for a oneshot of a simple game, maybe a
+        really basic driving sim where u have to drive a car and not
+        hit obstacle on the road
+      </blockquote>
+      <p>
+        My prompt explained the main idea, but I left many details up
+        to WebbGPT, including the controls, graphics, and scoring system.
+      </p>
+      <img
+        src="../assets/images/01-oneshot-prompt-response.png"
+        alt="My original prompt and WebbGPT's response">
+    </section>
+
+    <section class="project-section">
+      <h2>Game Features</h2>
+      <ul>
+        <li><strong>Controls:</strong> Arrow keys or A/D to steer.</li>
+        <li><strong>Obstacles:</strong> Avoid other cars on the road.</li>
+        <li><strong>Scoring:</strong> Earn 10 points for each obstacle that passes.</li>
+        <li><strong>Difficulty:</strong> The code adjusts speed and obstacle frequency.</li>
+        <li><strong>Restart:</strong> Play again after crashing.</li>
+      </ul>
+      <p>
+        The game uses HTML, CSS, and JavaScript to display the road,
+        draw the cars, and control the gameplay.
+      </p>
+      <img
+        src="../assets/images/02-oneshot-driving-game.png"
+        alt="Screenshot of the generated driving game">
+    </section>
+
+    <section class="project-section">
+      <h2>Game Autopsy</h2>
+      <p>
+        Looking through the code helped me understand how the different
+        parts work together. JavaScript handles movement, obstacle
+        spawning, scoring, and collision detection.
+      </p>
+      <p>
+        One potential issue is that the difficulty check can run
+        repeatedly while the score stays at a multiple of 100.
+        This could make the game speed up more than intended.
+      </p>
+      <p>
+        I could also improve the game by adding clearer instructions,
+        better graphics, and more reliable controls.
+      </p>
+    </section>
+
+    <section class="project-section">
+      <h2>What I Learned</h2>
+      <p>
+        This project showed me that setting clear goals helps guide
+        a project, even when using AI to generate code. My prompt
+        described the basic idea, and WebbGPT added features I had
+        not specifically requested.
+      </p>
+      <p>
+        If I did this project again, I would make my prompt more
+        detailed and test the finished game to make sure each feature
+        worked as intended.
+      </p>
+    </section>
+
+    <section class="project-section">
+      <h2>Final Reflection</h2>
+      <p>
+        Overall, this project helped me understand how an initial idea
+        can become a more complete game through planning and goal
+        setting. Comparing the generated code with my original prompt
+        helped me identify what the game included and what could improve.
+      </p>
+      <p>
+        While writing this reflection, I also used ChatGPT to help
+        organize my thoughts, explain parts of the code, and improve
+        the clarity of my writing. The original game idea and prompt
+        were mine, and I used the assistance to explain my process
+        and learning.
+      </p>
+      <p>
+        By the end of the week, I want to improve my understanding of
+        how the code works and learn how to modify it myself. I want
+        to become more comfortable changing different parts of the game
+        and seeing how those changes affect the final result.
+      </p>
+    </section>
+
+    <p><a href="../index.html">← Back to Home</a></p>
+  </main>
+</body>
+</html>

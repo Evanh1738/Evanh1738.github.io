@@ -1,151 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>One-Shot Game and Autopsy</title>
-  <link rel="stylesheet" href="../css/style.css">
-  <style>
-    .project-section {
-      margin: 30px 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One-Shot Game and Autopsy | Innovator Journal</title>
 
-    .project-section img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-      margin: 16px auto;
-      border: 2px solid #e63946;
-      border-radius: 8px;
-    }
+    <link rel="stylesheet" href="../css/style.css">
 
-    .project-section blockquote {
-      border-left: 3px solid #e63946;
-      padding-left: 16px;
-    }
-  </style>
+    <style>
+        .journal-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .journal-day {
+            margin: 48px 0;
+            padding-bottom: 32px;
+            border-bottom: 1px solid #333;
+        }
+
+        .journal-day h2 {
+            border-bottom: 2px solid #e63946;
+            padding-bottom: 10px;
+            margin-bottom: 24px;
+        }
+
+        .journal-day h3 {
+            margin-top: 32px;
+            margin-bottom: 14px;
+        }
+
+        .journal-day p {
+            line-height: 1.8;
+        }
+
+        .journal-image {
+            text-align: center;
+            margin: 24px auto;
+        }
+
+        .journal-image img {
+            display: block;
+            width: 100%;
+            max-width: 600px;
+            max-height: 420px;
+            height: auto;
+            object-fit: contain;
+            margin: 0 auto;
+            border-radius: 8px;
+        }
+
+        .journal-image figcaption {
+            max-width: 600px;
+            margin: 10px auto 0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            opacity: 0.85;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 24px 0;
+            color: #e63946;
+        }
+    </style>
 </head>
+
 <body>
-  <main class="container">
-    <h1>One-Shot Game and Autopsy</h1>
+    <main class="container">
+        <header>
+            <h1>One-Shot Game and Autopsy</h1>
+            <p>Innovator Journal | Planning, Goal Setting, and Game Development</p>
+        </header>
 
-    <section class="project-section">
-      <h2>Project Overview</h2>
-      <p>
-        For this project, I used WebbGPT to generate a one-shot game.
-        I chose a simple driving simulator where the player controls
-        a car and avoids obstacles. My goal was to see how well AI
-        could turn a basic idea into a playable game using one prompt.
-      </p>
-    </section>
+        <div class="journal-content">
 
-    <section class="project-section">
-      <h2>Planning and Goal Setting</h2>
-      <p>
-        I wanted my game to be simple but still fun to play. My main
-        goals were to create car controls, obstacles, a scoring system,
-        and a way to restart after crashing.
-      </p>
-      <ul>
-        <li>Create a playable driving game.</li>
-        <li>Make avoiding obstacles the main objective.</li>
-        <li>Track progress with a scoring system.</li>
-        <li>Increase the challenge as the game progresses.</li>
-        <li>Allow the player to restart after crashing.</li>
-      </ul>
-    </section>
+            <!-- DAY 1 -->
+            <section class="journal-day">
+                <h2>Day 1: Creating the Driving Game</h2>
 
-    <section class="project-section">
-      <h2>My Original Prompt</h2>
-      <blockquote>
-        can you make me code for a oneshot of a simple game, maybe a
-        really basic driving sim where u have to drive a car and not
-        hit obstacle on the road
-      </blockquote>
-      <p>
-        My prompt explained the main idea, but I left many details up
-        to WebbGPT, including the controls, graphics, and scoring system.
-      </p>
-      <img
-        src="../assets/images/01-oneshot-prompt-response.png"
-        alt="My original prompt and WebbGPT's response">
-    </section>
+                <h3>1. Project Overview</h3>
 
-    <section class="project-section">
-      <h2>Game Features</h2>
-      <ul>
-        <li><strong>Controls:</strong> Arrow keys or A/D to steer.</li>
-        <li><strong>Obstacles:</strong> Avoid other cars on the road.</li>
-        <li><strong>Scoring:</strong> Earn 10 points for each obstacle that passes.</li>
-        <li><strong>Difficulty:</strong> The code adjusts speed and obstacle frequency.</li>
-        <li><strong>Restart:</strong> Play again after crashing.</li>
-      </ul>
-      <p>
-        The game uses HTML, CSS, and JavaScript to display the road,
-        draw the cars, and control the gameplay.
-      </p>
-      <img
-        src="../assets/images/02-oneshot-driving-game.png"
-        alt="Screenshot of the generated driving game">
-    </section>
+                <p>
+                    For this project, I used AI to help create a simple driving
+                    simulation. The original idea was to drive a car and avoid
+                    obstacles on the road. I wanted to make a game that was
+                    easy to understand but still challenging to play.
+                </p>
 
-    <section class="project-section">
-      <h2>Game Autopsy</h2>
-      <p>
-        Looking through the code helped me understand how the different
-        parts work together. JavaScript handles movement, obstacle
-        spawning, scoring, and collision detection.
-      </p>
-      <p>
-        One potential issue is that the difficulty check can run
-        repeatedly while the score stays at a multiple of 100.
-        This could make the game speed up more than intended.
-      </p>
-      <p>
-        I could also improve the game by adding clearer instructions,
-        better graphics, and more reliable controls.
-      </p>
-    </section>
+                <h3>2. Planning and Goal Setting</h3>
 
-    <section class="project-section">
-      <h2>What I Learned</h2>
-      <p>
-        This project showed me that setting clear goals helps guide
-        a project, even when using AI to generate code. My prompt
-        described the basic idea, and WebbGPT added features I had
-        not specifically requested.
-      </p>
-      <p>
-        If I did this project again, I would make my prompt more
-        detailed and test the finished game to make sure each feature
-        worked as intended.
-      </p>
-    </section>
+                <p>
+                    My initial goal was to create a basic driving game where
+                    the player could control a car and avoid obstacles.
+                    I wanted to understand how the game worked and learn
+                    how to make changes to the code instead of only relying
+                    on the AI to create everything.
+                </p>
 
-    <section class="project-section">
-      <h2>Final Reflection</h2>
-      <p>
-        Overall, this project helped me understand how an initial idea
-        can become a more complete game through planning and goal
-        setting. Comparing the generated code with my original prompt
-        helped me identify what the game included and what could improve.
-      </p>
-      <p>
-        While writing this reflection, I also used ChatGPT to help
-        organize my thoughts, explain parts of the code, and improve
-        the clarity of my writing. The original game idea and prompt
-        were mine, and I used the assistance to explain my process
-        and learning.
-      </p>
-      <p>
-        By the end of the week, I want to improve my understanding of
-        how the code works and learn how to modify it myself. I want
-        to become more comfortable changing different parts of the game
-        and seeing how those changes affect the final result.
-      </p>
-    </section>
+                <p>
+                    My plan was to start with a working version of the game,
+                    test it, and then identify areas I could improve. This
+                    gave me a starting point for learning how the code
+                    controlled the gameplay and visuals.
+                </p>
 
-    <p><a href="../index.html">← Back to Home</a></p>
-  </main>
+                <h3>3. My Original Prompt</h3>
+
+                <p>
+                    I used the following prompt to ask AI to create my game:
+                </p>
+
+                <blockquote>
+                    Can you make me code for a oneshot of a simple game,
+                    maybe a really basic driving sim where u have to drive
+                    a car and not hit obstacle on the road
+                </blockquote>
+
+                <figure class="journal-image">
+                    <img
+                        src="../assets/images/01-oneshot-prompt-response.png"
+                        alt="Original AI prompt and response for the driving game">
+                    <figcaption>
+                        Image 1: My original prompt and the AI's response
+                        when I started creating the driving game.
+                    </figcaption>
+                </figure>
+
+                <h3>4. First Version of the Game</h3>
+
+                <p>
+                    After using the AI-generated code, I had a playable
+                    driving game called Reckless Driver. The player could
+                    move between lanes to avoid other cars and try to travel
+                    as far as possible without crashing.
+                </p>
+
+                <figure class="journal-image">
+                    <img
+                        src="../assets/images/02-oneshot-driving-game.png"
+                        alt="First version of the Reckless Driver game">
+                    <figcaption>
+                        Image 2: The original version of my driving game,
+                        with a road, traffic, and a crash screen.
+                    </figcaption>
+                </figure>
+
+                <h3>5. Autopsy and Reflection</h3>
+
+                <p>
+                    Looking at the first version helped me understand what
+                    was already working and what I wanted to improve. The
+                    basic gameplay was there, but the road and cars looked
+                    simple, and the experience could become repetitive.
+                </p>
+
+                <p>
+                    I realized that I could build on the original game
+                    instead of starting over. I wanted to learn more about
+                    the code by changing different parts, testing the
+                    results, and fixing problems when something did not
+                    work as expected.
+                </p>
+
+                <p>
+                    My main takeaway from Day 1 was that AI could help me
+                    get a starting point, but I still needed to make
+                    decisions about the design, test the game, and improve
+                    it based on my goals.
+                </p>
+            </section>
+
+            <!-- DAY 2 -->
+            <section class="journal-day">
+                <h2>Day 2: Improving the Driving Game</h2>
+
+                <h3>1. Adding Two-Way Traffic and Improving the Cars</h3>
+
+                <figure class="journal-image">
+                    <img
+                        src="../assets/images/oneshot-day2-01.jpg"
+                        alt="Driving game with two-way traffic and updated cars">
+                    <figcaption>
+                        Image 3: The updated driving game with traffic moving
+                        in both directions and improved car sprites.
+                    </figcaption>
+                </figure>
+
+                <p>
+                    I started by making the gameplay more interesting.
+                    I added two-way traffic so that cars could travel in
+                    both directions, making the road feel more like an
+                    actual road. I also polished the car sprites and made
+                    other improvements to the gameplay.
+                </p>
+
+                <p>
+                    These changes helped the game feel less like a basic
+                    obstacle-avoidance game and more like a driving
+                    simulation. I wanted the visuals and the gameplay
+                    to work together to make the experience more realistic.
+                </p>
+
+                <h3>2. Adding Random Intersections</h3>
+
+                <figure class="journal-image">
+                    <img
+                        src="../assets/images/oneshot-day2-02.jpg"
+                        alt="AI prompt requesting randomly placed road intersections">
+                    <figcaption>
+                        Image 4: I asked the AI to add randomly placed
+                        intersections to make the road layout less repetitive.
+                    </figcaption>
+                </figure>
+
+                <p>
+                    After working on the traffic, I wanted to add more
+                    variety to the roads. I asked the AI to add intersections
+                    at random locations. I also specified that two
+                    intersections should never be within 100 meters of
+                    each other.
+                </p>
+
+                <p>
+                    My goal was to make each run less predictable and give
+                    the player a road layout that felt more varied instead
+                    of repeating the same design.
+                </p>
+
+                <h3>3. Testing the Intersections</h3>
+
+                <figure class="journal-image">
+                    <img
+                        src="../assets/images/oneshot-day2-03.jpg"
+                        alt="Driving game showing the updated road and intersections">
+                    <figcaption>
+                        Image 5: The updated game showing the road layout
+                        after I began adding intersections.
+                    </figcaption>
+                </figure>
+
+                <p>
+                    After making the changes, I checked how the intersections
+                    appeared in the game. This let me see how the new road
+                    layouts worked alongside the existing traffic.
+                </p>
+
+                <p>
+                    Adding intersections was another step toward making
+                    the driving environment feel more realistic. It also
+                    gave me a chance to see how adding a new feature could
+                    change the overall appearance and experience of a game.
+                </p>
+
+                <h3>4. Changing the Visual Style</h3>
+
+                <figure class="journal-image">
+                    <img
+                        src="../assets/images/oneshot-day2-04.jpg"
+                        alt="Driving game with a blocky pixelated title font">
+                    <figcaption>
+                        Image 6: I experimented with the display size and
+                        changed the title to a more blocky, pixelated font.
+                    </figcaption>
+                </figure>
+
+                <p>
+                    Toward the end of class, I started experimenting with
+                    the display size and the game's visual style. I changed
+                    the font to a more blocky, pixelated style to give the
+                    game a stronger retro-game appearance.
+                </p>
+
+                <p>
+                    However, while I was changing the styling, the grass
+                    unexpectedly turned blue. I had to go back into the
+                    code and adjust the styling to fix the issue. This
+                    reminded me that changing one part of a project can
+                    sometimes cause unexpected changes elsewhere.
+                </p>
+
+                <h3>5. Reflection and Next Steps</h3>
+
+                <p>
+                    During Day 2, I made progress toward my goal of making
+                    the driving game feel more like real-life roads. I added
+                    two-way traffic, improved the car sprites, experimented
+                    with random intersections, and started changing the
+                    game's visual style.
+                </p>
+
+                <p>
+                    I also learned that developing a game involves testing
+                    changes and troubleshooting problems. When the grass
+                    turned blue, I had to investigate the styling instead
+                    of assuming every change would work perfectly.
+                </p>
+
+                <p>
+                    Moving forward, I want to continue improving the road
+                    layouts and car visuals while making sure the gameplay
+                    still works correctly. I also want to keep learning
+                    how the code works so I can make more changes myself
+                    and better understand the results.
+                </p>
+            </section>
+
+            <a class="back-link" href="../index.html">
+                &larr; Back to Portfolio
+            </a>
+
+        </div>
+    </main>
 </body>
 </html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Game Control | Evanharo1738.github.io</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .journal-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px 20px 60px;
+        }
+
+        .journal-content h1,
+        .journal-content h2,
+        .journal-content h3 {
+            color: white;
+        }
+
+        .journal-content h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 10px;
+        }
+
+        .journal-content h2 {
+            border-left: 4px solid #e63946;
+            padding-left: 12px;
+            margin-top: 38px;
+        }
+
+        .journal-content p,
+        .journal-content li {
+            line-height: 1.8;
+        }
+
+        .journal-content a {
+            color: #ff5964;
+        }
+
+        .journal-content figure {
+            margin: 24px 0;
+        }
+
+        .journal-content img,
+        .journal-content video {
+            display: block;
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            margin: 14px auto;
+            border-radius: 10px;
+            border: 1px solid #333;
+        }
+
+        .journal-content figcaption {
+            color: #bbb;
+            text-align: center;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        .journal-content .back-link {
+            display: inline-block;
+            margin-bottom: 25px;
+            text-decoration: none;
+            border: 1px solid #e63946;
+            padding: 9px 14px;
+            border-radius: 6px;
+        }
+
+        .journal-content .back-link:hover {
+            background: #e63946;
+            color: white;
+        }
+
+        .journal-content .project-label {
+            color: #ff5964;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="journal-content">
+
+        <a class="back-link" href="../index.html">← Back to Home</a>
+
+        <p class="project-label">Technology & Innovation</p>
+        <h1>Arduino Joystick Video Game Control</h1>
+        <p>
+            This project focused on connecting a physical Arduino joystick
+            to my Reckless Driver game so I could control the game without
+            relying on the WASD keys.
+        </p>
+
+        <h2>1. Project Overview</h2>
+        <p>
+            My goal was to use an Arduino joystick as a controller for my
+            existing Reckless Driver game. This project allowed me to explore
+            how physical hardware can communicate with a computer game and
+            how code can turn joystick movements into game inputs.
+        </p>
+
+        <h2>2. Project Setup</h2>
+        <p>
+            I used a YouTube tutorial to help me set up the joystick and its
+            wiring. With the help of the tutorial, I was able to get the
+            joystick working on my first try. This made the setup process
+            go smoothly and gave me a working starting point for the project.
+        </p>
+
+        <figure>
+            <img
+                src="../assets/images/joystick-wiring.jpg"
+                alt="Arduino joystick wiring setup"
+                loading="lazy">
+            <figcaption>
+                The Arduino joystick and its wiring setup for the video game
+                controller project.
+            </figcaption>
+        </figure>
+
+        <h2>3. How I Used AI</h2>
+        <p>
+            I asked AI to help write the code needed to connect the Arduino
+            joystick to my game. The code reads the joystick's inputs and
+            sends information that the game can use to control the car.
+            It checks the joystick's direction so the game can respond to
+            movement. It can also read the joystick's built-in button input,
+            which can be used for additional controls.
+        </p>
+        <p>
+            I used AI to help me understand how to connect the controller
+            to the game and explore using the button to pause, resume, and
+            restart the game. I still had to test the controls myself to see
+            how the joystick behaved.
+        </p>
+
+        <figure>
+            <img
+                src="../assets/images/joystick-code.png"
+                alt="Code used for the Arduino joystick controller"
+                loading="lazy">
+            <figcaption>
+                The code used to read joystick inputs and connect the
+                controller to the game.
+            </figcaption>
+        </figure>
+
+        <h2>4. Execution and Troubleshooting</h2>
+        <p>
+            After setting up the wiring, I had to connect the Arduino to
+            the game through a serial port. Once I selected the port and
+            connected successfully, the joystick was able to control the
+            game.
+        </p>
+        <p>
+            One unexpected discovery was that pushing the joystick downward
+            also activated its built-in button. Instead of ignoring this,
+            I thought about how that extra input could be useful as another
+            game control. I explored using the button for pausing, resuming,
+            and restarting the game.
+        </p>
+        <p>
+            This process showed me why testing matters. Even when the main
+            controls work, trying different inputs can reveal unexpected
+            behavior and give me ideas for additional features.
+        </p>
+
+        <figure>
+            <video controls preload="metadata">
+                <source
+                    src="../assets/videos/joystick-game-demo.mp4"
+                    type="video/mp4">
+                Your browser does not support this video.
+            </video>
+            <figcaption>
+                A demonstration of the Arduino joystick controlling my
+                Reckless Driver game.
+            </figcaption>
+        </figure>
+
+        <h2>5. My Thinking and Reflection</h2>
+        <p>
+            I was surprised that I was able to get the joystick working
+            on my first try with the help of the YouTube tutorial. Asking
+            AI to write the code made it easier to connect the hardware
+            to the game, while testing helped me understand how the inputs
+            affected the controls.
+        </p>
+        <p>
+            I learned that building a game controller involves both the
+            physical wiring and the software that interprets the inputs.
+            I also learned that an unexpected result does not always have
+            to be a problem. Sometimes it can lead to a useful new feature.
+            Overall, this project helped me learn more about hardware,
+            coding, and troubleshooting.
+        </p>
+
+    </main>
+</body>
+</html>

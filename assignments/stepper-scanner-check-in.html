@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stepper Motor and Scanner Check-In | Evanharo1738</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .scanner-page {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 24px 70px;
+      color: white;
+    }
+
+    .scanner-page a {
+      color: #ff3333;
+      text-decoration: none;
+    }
+
+    .scanner-page a:hover {
+      text-decoration: underline;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+
+    .scanner-page h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      margin-bottom: 12px;
+      line-height: 1.1;
+    }
+
+    .scanner-page h2 {
+      font-size: 1.7rem;
+      margin-top: 45px;
+      border-bottom: 2px solid #e32636;
+      padding-bottom: 10px;
+    }
+
+    .scanner-page h3 {
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: #aaa;
+      font-size: 1.05rem;
+      margin-bottom: 28px;
+    }
+
+    .intro {
+      line-height: 1.7;
+      color: #ddd;
+      max-width: 800px;
+    }
+
+    .project-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 25px 0;
+    }
+
+    .detail-tag {
+      border: 1px solid #e32636;
+      padding: 7px 12px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 25px;
+      margin-top: 25px;
+    }
+
+    .photo-card {
+      background: #151515;
+      border: 1px solid #333;
+      border-radius: 9px;
+      overflow: hidden;
+    }
+
+    .photo-card img {
+      display: block;
+      width: 100%;
+      max-height: 360px;
+      object-fit: contain;
+      background: #080808;
+    }
+
+    .photo-caption {
+      padding: 17px;
+    }
+
+    .photo-caption h3 {
+      color: #ff4545;
+      margin-top: 0;
+    }
+
+    .photo-caption p {
+      color: #ccc;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    .reflection {
+      background: #151515;
+      border-left: 4px solid #e32636;
+      padding: 20px;
+      margin-top: 25px;
+      line-height: 1.7;
+      color: #ddd;
+    }
+
+    .scanner-page ul {
+      line-height: 1.9;
+      color: #ddd;
+    }
+
+    @media (max-width: 650px) {
+      .photo-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .scanner-page {
+        padding: 25px 16px 50px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="scanner-page">
+
+    <a class="back-link" href="../index.html">← Back to Projects</a>
+
+    <h1>Stepper Motor and Scanner Check-In</h1>
+
+    <p class="subtitle">3D Scanner Project · Progress Journal</p>
+
+    <div class="project-details">
+      <span class="detail-tag">Arduino</span>
+      <span class="detail-tag">Stepper Motor</span>
+      <span class="detail-tag">IR Scanner</span>
+      <span class="detail-tag">3D Scanning</span>
+    </div>
+
+    <p class="intro">
+      For this project, we began building the main systems for a 3D scanner.
+      Our progress so far includes setting up a stepper motor, wiring and
+      testing an infrared (IR) scanner, and planning a rotating turntable.
+      The overall goal is to keep the scanner in a stationary position while
+      rotating an object so that we can collect readings from different angles.
+    </p>
+
+    <h2>1. Building the Stepper Motor System</h2>
+
+    <p class="intro">
+      We started by assembling the stepper motor system using an Arduino,
+      an A4988 motor driver, a breadboard, and a NEMA 17 stepper motor.
+      Getting the wiring and driver settings correct took some trial and error.
+    </p>
+
+    <div class="photo-grid">
+
+      <article class="photo-card">
+        <img src="../assets/images/stepper-motor-initial-wiring.jpg"
+             alt="Initial stepper motor wiring">
+        <div class="photo-caption">
+          <h3>01 — Initial Wiring</h3>
+          <p>
+            We began reconstructing the stepper motor setup and connecting
+            the motor driver. One challenge was calibrating the driver using
+            its potentiometer. We had difficulty adjusting it with a
+            screwdriver, but after some trial and error, we got it working.
+          </p>
+        </div>
+      </article>
+
+      <article class="photo-card">
+        <img src="../assets/images/arduino-stepper-connections.jpg"
+             alt="Arduino connections for the stepper motor">
+        <div class="photo-caption">
+          <h3>02 — Arduino Connections</h3>
+          <p>
+            We continued wiring the Arduino so it could communicate with
+            the stepper motor driver. This step was important because the
+            Arduino would send the signals needed to control the motor's
+            movement.
+          </p>
+        </div>
+      </article>
+
+      <article class="photo-card">
+        <img src="../assets/images/stepper-motor-driver-setup.jpg"
+             alt="Nearly completed stepper motor driver setup">
+        <div class="photo-caption">
+          <h3>03 — Motor Driver Setup</h3>
+          <p>
+            This shows our nearly completed setup, with the Arduino,
+            breadboard, driver, and stepper motor connected. The motor had
+            four differently colored wires that we had to match to the
+            correct connections. We switched the wires around until the
+            motor worked properly.
+          </p>
+        </div>
+      </article>
+
+      <article class="photo-card">
+        <img src="../assets/images/stepper-motor-code-prompt.jpg"
+             alt="Prompt used to generate stepper motor code">
+        <div class="photo-caption">
+          <h3>04 — Creating the Motor Code</h3>
+          <p>
+            We uploaded our wiring diagram and setup to AI and asked it
+            to generate code that matched our actual pin connections.
+            This helped us create a starting point for controlling the
+            stepper motor. We needed the code to match the physical wiring
+            so that the correct signals would reach the motor driver.
+          </p>
+        </div>
+      </article>
+
+      <article class="photo-card">
+        <img src="../assets/images/completed-stepper-motor-setup.jpg"
+             alt="Completed stepper motor setup">
+        <div class="photo-caption">
+          <h3>05 — Working Stepper Motor</h3>
+          <p>
+            After adjusting the wiring and code, we got the complete
+            stepper motor setup working. The Arduino was able to send
+            signals through the A4988 driver to control the motor's
+            rotation. This gave us a working foundation for the next
+            part of the project.
+          </p>
+        </div>
+      </article>
+
+    </div>
+
+    <h2>2. Planning the Rotating Turntable</h2>
+
+    <div class="photo-grid">
+
+      <article class="photo-card">
+        <img src="../assets/images/turntable-design-planning.jpg"
+             alt="Planning the turntable design">
+        <div class="photo-caption">
+          <h3>06 — Choosing a Design</h3>
+          <p>
+            We started brainstorming how to move an object so the IR
+            scanner could collect readings from different angles. We
+            visited the robotics room and looked at John Deng's model,
+            which used a conveyor belt to move an object. This inspired
+            our first idea, but we eventually decided that a conveyor
+            belt would not be practical for our design. Instead, we
+            chose to explore a rotating table powered by our stepper
+            motor, allowing the object to rotate while the scanner
+            stays stationary.
+          </p>
+        </div>
+      </article>
+
+      <article class="photo-card">
+        <img src="../assets/images/turntable-model-research.jpg"
+             alt="Looking for a model to fit the stepper motor">
+        <div class="photo-caption">
+          <h3>12 — Finding a Turntable Model</h3>
+          <p>
+            We went into Studio A to look through existing models and
+            find one that could fit our stepper motor. This was the
+            beginning of figuring out how to physically connect the
+            motor to a turntable that could rotate an object.
+          </p>
+        </div>
+      </article>
+
+    </div>
+
+    <h2>3. Wiring and Testing the IR Scanner</h2>
+
+    <p class="intro">
+      After getting the motor working, we moved on to setting up the
+      infrared scanner. We followed a wiring guide and adapted the
+      scanner's original wires so they could connect to our Arduino.
+    </p>
+
+    <div class="photo-grid">
+
+      <article class="photo-card">
+        <img src="../assets/images/ir-scanner-initial-wiring.jpg"
+             alt="Initial IR scanner wiring">
+        <div class="photo-caption">
+          <h3>07 — Scanner Wiring</h3>
+          <p>
+            Ava and I followed a guide to begin wiring the IR scanner.
+            We used the guide to understand how the scanner needed to
+            connect to the rest of our Arduino setup.
+          </p>
+        </div>
+      </article>
+
+      <article class="photo-card">
+        <img src="../assets/images/ir-scanner-wire-stripping.jpg"
+             alt="Preparing the scanner wires">
+        <div class="photo-caption">
+          <h3>08 — Preparing the Wires</h3>
+          <p>
+            The scanner's original wires needed to be adapted so they
+            could fit into the Arduino pins. We manually stripped the
+            wires and joined them to additional wires. At first, we
+            used electrical tape to hold the connections together.
+          </p>
+        </div>
+      </article>
+
+      <article class="photo-card">
+        <img src="../assets/images/completed-ir-scanner-setup.jpg"
+             alt="Completed IR scanner setup">
+        <div class="photo-caption">
+          <h3>09 — Scanner Setup</h3>
+          <p>
+            This shows the completed initial wiring for the IR scanner.
+            With the connections in place, we could begin testing the
+            scanner and checking whether it was producing readings.
+          </p>
+        </div>
+      </article>
+
+      <article class="photo-card">
+        <img src="../assets/images/ir-scanner-initial-readings.jpg"
+             alt="Initial readings from the IR scanner">
+        <div class="photo-caption">
+          <h3>10 — Initial Scanner Readings</h3>
+          <p>
+            We began testing the scanner and looking at the readings
+            it produced. This helped us check whether the sensor was
+            communicating with our setup and collecting data.
+          </p>
+        </div>
+      </article>
+
+      <article class="photo-card">
+        <img src="../assets/images/ir-scanner-calibration.jpg"
+             alt="Continuing to test and calibrate the IR scanner">
+        <div class="photo-caption">
+          <h3>11 — Testing and Calibration</h3>
+          <p>
+            We continued checking the scanner's readings and working
+            on calibration. Comparing the readings during testing
+            helped us understand how the scanner was responding and
+            what adjustments might be needed.
+          </p>
+        </div>
+      </article>
+
+      <article class="photo-card">
+        <img src="../assets/images/ir-scanner-crimped-connections.jpg"
+             alt="Crimped IR scanner wire connections">
+        <div class="photo-caption">
+          <h3>13 — Improving the Wire Connections</h3>
+          <p>
+            We realized that the electrical tape was not holding the
+            joined scanner wires securely enough. To improve the
+            connection, we switched to crimping the wires instead.
+            This created a stronger hold and made the wiring more
+            reliable.
+          </p>
+        </div>
+      </article>
+
+    </div>
+
+    <h2>4. Troubleshooting and Reflection</h2>
+
+    <div class="reflection">
+      <p>
+        So far, one of the biggest challenges has been getting all of
+        the electrical connections to work correctly. The stepper
+        motor required us to experiment with its wiring and calibrate
+        the driver before it worked. We also had to adapt the IR
+        scanner's original wires to fit our Arduino setup.
+      </p>
+
+      <p>
+        We learned that getting a project to work is not just about
+        following a diagram. Small details in wiring, connections,
+        and calibration can make a big difference. For example,
+        switching from electrical tape to crimping gave us a more
+        secure scanner connection.
+      </p>
+
+      <p>
+        We also changed our original design idea after considering
+        how practical it would be. Instead of using a conveyor belt,
+        we decided to investigate a rotating turntable powered by
+        our stepper motor. This should allow us to scan an object
+        from different angles without moving the scanner itself.
+      </p>
+
+      <p>
+        We still need to develop the turntable and figure out how
+        to combine the scanner and motor into one working system.
+        Our next goal is to find or create a model that fits the
+        motor and allows the object to rotate smoothly.
+      </p>
+    </div>
+
+  </main>
+</body>
+</html>

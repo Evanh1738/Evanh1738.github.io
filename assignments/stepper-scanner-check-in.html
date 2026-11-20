@@ -246,7 +246,7 @@
 
     </div>
 
-    <h2>2. Planning the Rotating Turntable</h2>
+    <h2>2. Planning and Building the Rotating Turntable</h2>
 
     <div class="photo-grid">
 
@@ -279,6 +279,78 @@
             find one that could fit our stepper motor. This was the
             beginning of figuring out how to physically connect the
             motor to a turntable that could rotate an object.
+          </p>
+        </div>
+      </article>
+
+      <article class="photo-card">
+        <img src="../assets/images/turntable-base-3d-print.jpg"
+             alt="3D printed base for the turntable">
+        <div class="photo-caption">
+          <h3>14 — 3D Printing the Turntable Base</h3>
+          <p>
+            Ava and I 3D printed a base for our turntable that would
+            connect to our stepper motor and allow it to rotate. We
+            plan to place an object on top of the platform while
+            keeping the IR scanner stationary, allowing the motor to
+            rotate the object so the scanner can collect readings
+            from all sides. This was an important step because we
+            were finally turning our original design idea into a
+            physical component. Instead of having to move the scanner
+            around the object, we are creating a system where the
+            object rotates, hopefully making the scanning process
+            more consistent and efficient.
+          </p>
+        </div>
+      </article>
+
+      <article class="photo-card">
+        <img src="../assets/images/turntable-motor-fit-issue.jpg"
+             alt="Turntable base with an opening that does not fit the stepper motor">
+        <div class="photo-caption">
+          <h3>15 — Discovering a Design Issue</h3>
+          <p>
+            When we examined the bottom of the turntable, where the
+            stepper motor was supposed to fit, we realized that the
+            opening was too large for our motor. The original 3D model
+            had been designed for a longer motor than the one we were
+            using, so our stepper motor did not fit correctly into the
+            base. This showed us that even though a 3D model might
+            look like it would work, we still needed to consider the
+            exact dimensions of our physical components. We would need
+            to adjust the design or find a better-fitting model before
+            we could properly attach the motor and get the turntable
+            rotating.
+          </p>
+        </div>
+      </article>
+
+      <article class="photo-card">
+        <img src="../assets/images/resized-turntable-print-test.jpg"
+             alt="Resized turntable components and initial movement test">
+        <div class="photo-caption">
+          <h3>16 — Resizing, Printing, and Testing the Turntable</h3>
+          <p>
+            To fix the sizing issue, we opened the model in Bambu Studio
+            and manually measured the dimensions we needed so the base
+            would fit our stepper motor. We used AI and YouTube tutorials
+            to learn how to resize and modify the 3D model, then adjusted
+            it to better match our motor. After making the changes, we
+            sent the updated base and the other turntable components to
+            print using two different 3D printers. Unfortunately, one
+            of the printers experienced a nozzle issue, which prevented
+            some of our parts from printing successfully. Luckily, the
+            printer making our redesigned base and actual turntable
+            platform worked, so we were still able to get the most
+            important components. We also powered the turntable to test
+            its movement, but it rotated shakily and scraped against
+            the base. We realized that because some of the supporting
+            components had not printed, the assembly was missing pieces
+            that were supposed to help it function properly. This showed
+            us that the individual printed parts needed to work together
+            as a complete assembly, and we would need to finish printing
+            the missing components before the turntable could operate
+            more smoothly.
           </p>
         </div>
       </article>
@@ -379,7 +451,74 @@
 
     </div>
 
-    <h2>4. Troubleshooting and Reflection</h2>
+    <h2>4. Planning the Scanner's Movement</h2>
+
+    <p class="intro">
+      Once we had started developing the turntable and scanner separately,
+      we also needed to figure out how the scanner itself would move.
+      We began sketching and modeling a possible mechanism for scanning
+      an object from different heights and angles.
+    </p>
+
+    <div class="photo-grid">
+
+      <article class="photo-card">
+        <img src="../assets/images/ir-scanner-motion-sketch.jpg"
+             alt="Sketch of the planned IR scanner movement mechanism">
+        <div class="photo-caption">
+          <h3>17 — Designing the Scanner's Movement</h3>
+          <p>
+            Although we didn't have enough time to fully develop the IR
+            scanner system, we still had two more class periods to
+            continue working on it, so we focused on planning how the
+            scanner would move. We settled on a design where a second
+            stepper motor would rotate a pole with the IR scanner
+            attached, allowing it to sweep up and down while scanning
+            the object. For this system to work accurately, we would
+            need to know the exact angle of the scanner at each position
+            so our software could calculate distances and eventually
+            plot the measurements correctly. We also created a rough
+            physical model using available objects to visualize how
+            the mechanism would work in three dimensions. Dr. Dzula's
+            guidance and Matthew's project helped inspire this movement
+            design. Moving forward, we plan to develop this mechanism,
+            finish printing the turntable components, and improve its
+            rotation so that both systems can work together to scan
+            an object from multiple angles.
+          </p>
+        </div>
+      </article>
+
+      <article class="photo-card">
+        <img src="../assets/images/ir-scanner-3d-motion-model.jpg"
+             alt="Rough physical model of the IR scanner movement mechanism">
+        <div class="photo-caption">
+          <h3>18 — Visualizing the Mechanism in 3D</h3>
+          <p>
+            Although we didn't have enough time to fully develop the IR
+            scanner system, we still had two more class periods to
+            continue working on it, so we focused on planning how the
+            scanner would move. We settled on a design where a second
+            stepper motor would rotate a pole with the IR scanner
+            attached, allowing it to sweep up and down while scanning
+            the object. For this system to work accurately, we would
+            need to know the exact angle of the scanner at each position
+            so our software could calculate distances and eventually
+            plot the measurements correctly. We also created a rough
+            physical model using available objects to visualize how
+            the mechanism would work in three dimensions. Dr. Dzula's
+            guidance and Matthew's project helped inspire this movement
+            design. Moving forward, we plan to develop this mechanism,
+            finish printing the turntable components, and improve its
+            rotation so that both systems can work together to scan
+            an object from multiple angles.
+          </p>
+        </div>
+      </article>
+
+    </div>
+
+    <h2>5. Troubleshooting and Reflection</h2>
 
     <div class="reflection">
       <p>
@@ -393,9 +532,9 @@
       <p>
         We learned that getting a project to work is not just about
         following a diagram. Small details in wiring, connections,
-        and calibration can make a big difference. For example,
-        switching from electrical tape to crimping gave us a more
-        secure scanner connection.
+        measurements, and calibration can make a big difference.
+        For example, switching from electrical tape to crimping gave
+        us a more secure scanner connection.
       </p>
 
       <p>
@@ -407,10 +546,29 @@
       </p>
 
       <p>
-        We still need to develop the turntable and figure out how
-        to combine the scanner and motor into one working system.
-        Our next goal is to find or create a model that fits the
-        motor and allows the object to rotate smoothly.
+        Building the turntable introduced another set of challenges.
+        We had to resize the original 3D model to fit our motor, and
+        one of the printers had a nozzle issue that prevented some
+        of our parts from printing. When we tested the turntable
+        without all of its supporting components, it moved shakily
+        and scraped against the base. This showed us how important
+        it is for every part of the design to fit and function together.
+      </p>
+
+      <p>
+        We have also started planning how the IR scanner will move
+        vertically using a second stepper motor and a rotating pole.
+        One important part of this design will be tracking the exact
+        angle of the scanner so that our software can use the readings
+        to calculate distances and eventually create a 3D plot.
+      </p>
+
+      <p>
+        Our next goal is to finish printing and assembling the turntable,
+        improve its rotation, and begin developing the scanner movement
+        mechanism. We still have work to do before the full system is
+        complete, but we now have a clearer idea of how the separate
+        components will work together.
       </p>
     </div>
 
